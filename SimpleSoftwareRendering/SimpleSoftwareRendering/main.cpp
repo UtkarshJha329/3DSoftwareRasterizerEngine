@@ -304,14 +304,14 @@ int main()
     //LoadModel(modelsPath + testUtahTeaPotFileName, testCubeModel);
     //LoadModel(modelsPath + testBlenderMonkeyFileName, testCubeModel);
     //LoadModel(modelsPath + testCubeTexturedFileName, testCubeModel);
-    //LoadModel(modelsPath + truckTexturedFileName, testCubeModel);
+    LoadModel(modelsPath + truckTexturedFileName, testModel);
     //LoadModel(modelsPath + colouredCubeFileName, testCubeModel);
     //LoadModel(modelsPath + colouredAndTexturedCubeFileName, testCubeModel);
     //LoadModel(modelsPath + planeTexturedFileName, testCubeModel);
     //LoadModel(modelsPath + utahTeapotTexturedFileName, testCubeModel);
     //LoadModel(modelsPath + monu2FileName, testCubeModel);
     //LoadModel(modelsPath + LowPolyForestTerrainFileName, testCubeModel);
-    LoadModel(modelsPath + texturedSuzanneFileName, testModel);
+    //LoadModel(modelsPath + texturedSuzanneFileName, testModel);
 
 
     const int rootUIRectIndex = UI_Rect::uiRects.size();
@@ -416,7 +416,7 @@ int main()
     }
 
     RenderUITree(UI_Rect::uiRects[rootUIRectIndex], screenWidth, screenHeight, imageData);
-    AddUITreeToCollisionGrid();
+    //AddUITreeToCollisionGrid();
 
     auto previousTime = std::chrono::high_resolution_clock::now();
     while (!glfwWindowShouldClose(window))

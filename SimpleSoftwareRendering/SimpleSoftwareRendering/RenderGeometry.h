@@ -120,14 +120,15 @@ struct PixelRenderingData {
 
 	const Vector3& lightDotTriangleNormals;
 	const Vector3& deltaY; const Vector3& deltaX; const Vector3& deltaK;
-	const float& areaOfTriangle;
 	const Vector3& invDepth;
 	const Vector3& invW; const Vector3& texWs;
 	//Mat3x3& vertexWorldPositions;
 	const Triangle& curTriangle;
-	const float& colourTextureMixFactor;
-	const Colour& fixedColour; bool drawFixedColour;
+	const Colour& fixedColour; 
 	const Texture* curTex;
+	const float& areaOfTriangle;
+	const float& colourTextureMixFactor;
+	bool drawFixedColour;
 };
 
 void DrawCurrentPixelWithInterpValues(const float& imageWidth, const float& x, const float& y, const PixelRenderingData& prd, std::vector<unsigned char>& imageData, std::vector<float>& imageDepthData) {
